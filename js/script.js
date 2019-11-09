@@ -57,7 +57,7 @@ function getrRandomColor(){
  /***
  * setting interval sets a interval for executing `printQuote'
 ***/
-var myVar = setInterval(printQuote, 3000);
+var myVar = setInterval(printQuote, 9000);
  /***
  * `ChangeColor` function change background color with change of quote
 ***/
