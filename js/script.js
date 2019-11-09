@@ -2,13 +2,8 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
 /*** 
- * `quotes` array 
+ Array of quote objects with quote, source, citation, years,tags as properties.
 ***/
 const quotes=[{
 	quote:"It's the possibility of having a dream come true that makes life interesting",
@@ -47,24 +42,24 @@ const quotes=[{
 }];
 let interval;
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function picks a random quote from quote array
 ***/
 function getRandomQuote(){
 	let random = Math.floor(Math.random()*quotes.length);
 	return quotes[random];
 }
 /***
- * `getRandomColor` function
+ * `getRandomColor` function chooses a random color 
 ***/
 function getrRandomColor(){
 	return Math.floor(Math.random()*256);
 }
  /***
- * setting interval
+ * setting interval sets a interval for executing `printQuote'
 ***/
 var myVar = setInterval(printQuote, 3000);
  /***
- * `ChangeColor` function
+ * `ChangeColor` function change background color with change of quote
 ***/
 function changeColor() {
 	var red = getrRandomColor();
@@ -74,7 +69,7 @@ function changeColor() {
     document.body.style.background = color; 
  } 
  /***
- * `printQuote` function
+ * `printQuote` function print random quotes choosed by `randomQuotes`
 ***/
  
 function printQuote(){
@@ -96,6 +91,5 @@ function printQuote(){
 
 /***
  * click event listener for the print quote button
- * DO NOT CHANGE THE OF CODE BELOW!!
 ***/
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
